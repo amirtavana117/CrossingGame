@@ -12,6 +12,7 @@ class Car(Turtle):
         super().__init__()
         self.Cars = []
         self.hideturtle()
+        self.carSpeed = MOVE_FORWARD
 
     def Create_car(self):
         random_chance_to_create_car = random.randint(1, 7)
@@ -31,4 +32,7 @@ class Car(Turtle):
     def Move(self):
         for car in self.Cars:
             car.setheading(180)
-            car.forward(MOVE_FORWARD)
+            car.forward(self.carSpeed)
+
+    def Increase_speed(self):
+        self.carSpeed += MOVE_FORWARD

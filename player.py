@@ -15,3 +15,9 @@ class Player(Turtle):
 
     def Up(self):
         self.forward(MOVE_DISTANCE)
+
+    def win(self, y):
+        if y >= FINISH_LINE:
+            self.goto(STARTING_POSITION)
+            return True
+        return False

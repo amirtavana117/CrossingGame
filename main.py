@@ -23,4 +23,7 @@ while Game_is_on:
     for car_r in car.Cars:
         if car_r.distance(player) < 20:
             Game_is_on = False
+    if player.win(player.ycor()):
+        car.Increase_speed()
+
 screen.exitonclick()
