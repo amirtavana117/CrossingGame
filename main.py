@@ -4,13 +4,13 @@ from player import Player
 
 
 screen = Screen()
-screen.setup(width=600, height=600)
 screen.tracer(0)
+screen.setup(width=600, height=600)
 
 
 player = Player()
+screen.listen()
 screen.onkey(player.Up, "Up")
-screen.onkey(player.Down, "Down")
 
 Game_is_on = True
 
